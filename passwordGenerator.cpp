@@ -59,43 +59,49 @@ int main() {
   int userLength;
   string userInput;
   bool includeUpper, includeLower, includeDigit, includeSpecial;
+
   cout << "Enter the desired length of the password: " << endl;
   cin >> userLength;
+
   cout << "Include uppercase letters? (e.g. ABC) Yes or No?" << endl;
   cin >> userInput;
   transform(userInput.begin(), userInput.end(), userInput.begin(), ::toupper);
-  if (userInput == "YES") {
+  if (userInput == "YES" || userInput == "Y") {
     includeUpper = true;
   } else {
     includeUpper = false;
   }
+
   cout << "Include lowercase letters? (e.g. abc) Yes or No?" << endl;
   cin >> userInput;
   transform(userInput.begin(), userInput.end(), userInput.begin(), ::toupper);
-  if (userInput == "YES") {
+  if (userInput == "YES" || userInput == "Y") {
     includeLower = true;
   } else {
     includeLower = false;
   }
+
   cout << "Include digits? (e.g. 123) Yes or No?" << endl;
   cin >> userInput;
   transform(userInput.begin(), userInput.end(), userInput.begin(), ::toupper);
-  if (userInput == "YES") {
+  if (userInput == "YES" || userInput == "Y") {
     includeDigit = true;
   } else {
     includeDigit = false;
   }
+
   cout << "Include special characters? (e.g. !@#) Yes or No?" << endl;
   cin >> userInput;
   transform(userInput.begin(), userInput.end(), userInput.begin(), ::toupper);
-  if (userInput == "YES") {
+  if (userInput == "YES" || userInput == "Y") {
     includeSpecial = true;
   } else {
     includeSpecial = false;
   }
+
   string password = passwordGenerator(userLength, includeUpper, includeLower, includeDigit, includeSpecial);
   if (!password.empty()) {
-    cout << "Genereated Password: " << password << endl;
+    cout << "Generated Password: " << password << endl;
   }
 
   return 0;
