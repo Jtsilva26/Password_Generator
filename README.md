@@ -10,7 +10,6 @@ This project is a simple C++ program that generates a random password based on u
 - **File Name**: passwordGenerator.cpp
 - **Author**: Jordan Silva
 - **Date Created**: 2024-07-22
-- **Last Modified**: 2024-07-22
 
 ## Description
 
